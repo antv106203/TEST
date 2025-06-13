@@ -1,0 +1,38 @@
+.title-container {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    gap: 30px;
+    text-align: center;
+}
+
+.title-exit {
+    font-family: 'Montserrat', sans-serif;
+    color: #52768f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+.title-exit svg {
+    font-size: 20px;
+}
+
+.title-exit-label {
+    font-family: 'Montserrat', sans-serif;
+    color: #52768f;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.title-name {
+    font-family: 'Montserrat', sans-serif;
+    color: #52768f;
+    font-size: 20px;
+    font-weight: 900;
+}

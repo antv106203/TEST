@@ -1,0 +1,365 @@
+.redesign-staff-container {
+    display: flex;
+    background-color: #f1f5f9;
+    flex-grow: 1;
+    font-family: "Segoe UI", sans-serif;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.redesign-staff-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* Bộ lọc đẹp và hiện đại */
+.redesign-staff-content-filter {
+    background-color: #ffffff;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 10px 60px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Input và Select */
+.redesign-staff-content-filter input,
+.redesign-staff-content-filter select {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 220px;
+    height: 42px;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: border-color 0.2s ease-in-out;
+}
+
+.redesign-staff-content-filter input:focus,
+.redesign-staff-content-filter select:focus {
+    border-color: #08a189;
+    outline: none;
+}
+
+/* Nút Thêm nhân viên */
+.redesign-staff-content-filter-add-btn {
+    padding: 10px 18px;
+    background-color: #08a189;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 42px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.redesign-staff-content-filter-add-btn:hover {
+    background-color: #036a5b;
+}
+
+.redesign-staff-content-table {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.redesign-staff-content-table-status {
+    display: flex;
+    gap: 12px;
+    padding: 8px 4px 0 4px;
+    margin-bottom: 12px;
+}
+
+.redesign-staff-content-table-status-tab {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #555;
+}
+
+.redesign-staff-content-table-status-tab:hover {
+    color: #08a189;
+}
+
+.redesign-staff-content-table-status-tab.active {
+    border-bottom: 3px solid #08a189;
+    color: #08a189;
+    font-weight: 600;
+}
+
+.table-responsive-wrapper {
+    max-height: 350px;
+    min-height: 350px;
+    overflow-y: auto;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.redesign-staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.redesign-staff-table th,
+.redesign-staff-table td {
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.redesign-staff-table thead {
+    background-color: #f1f3f5;
+}
+
+.redesign-staff-table tbody tr:hover {
+    background-color: #f9fbff;
+    transition: background-color 0.2s ease;
+}
+
+/* Avatar */
+.staff-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+/* Hành động */
+.action-btn {
+    padding: 6px 10px;
+    margin-right: 6px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.action-btn.view {
+    background-color: #e0f3ff;
+    color: #007bff;
+}
+
+.action-btn.delete {
+    background-color: #ffecec;
+    color: #d63031;
+}
+
+.action-btn:hover {
+    opacity: 0.85;
+}
+
+/* Footer chứa limit + phân trang */
+.redesign-staff-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+}
+
+/* Pagination controls */
+.redesign-staff-footer-pagination-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.redesign-staff-footer-pagination-controls button {
+    padding: 4px 8px;
+    background-color: #e9ecef;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.redesign-staff-footer-pagination-controls button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.redesign-staff-footer-pagination-controls button:hover:not(:disabled) {
+    background-color: #dce3eb;
+}
+
+.redesign-staff-footer-pagination-controls button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Nhảy đến trang */
+.redesign-staff-footer-jump-to-page {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.redesign-staff-footer-jump-to-page input {
+    width: 60px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.redesign-staff-footer-jump-to-page input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.redesign-staff-footer-limit-wrapper {
+    position: relative;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.redesign-staff-footer-limit-selected {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.redesign-staff-footer-limit-selected:hover {
+    background-color: #f8f9fa;
+}
+
+.redesign-staff-footer-limit-options {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    margin-bottom: 6px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 140px;
+}
+
+.redesign-staff-footer-limit-option {
+    padding: 8px 12px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.redesign-staff-footer-limit-option:hover {
+    background-color: #f1f1f1;
+}
+
+.redesign-staff-footer-limit-option.selected {
+    background-color: #e6f0ff;
+    font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .redesign-staff-content-filter {
+        flex-direction: column;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .redesign-staff-content-filter input,
+    .redesign-staff-content-filter select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .redesign-staff-content-filter-add-btn {
+        width: 100%;
+    }
+
+    .redesign-staff-content-table-status {
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .redesign-staff-content-table-status-tab {
+        padding: 8px 16px;
+        white-space: nowrap;
+    }
+
+    .table-responsive-wrapper {
+        overflow-x: auto;
+    }
+
+    .redesign-staff-table th,
+    .redesign-staff-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .action-btn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .redesign-staff-footer {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+    }
+
+    .redesign-staff-footer-pagination-controls {
+        justify-content: center;
+    }
+
+    .redesign-staff-footer-jump-to-page {
+        margin: 8px 0;
+        justify-content: center;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .redesign-staff-content-filter {
+        padding: 16px 24px;
+    }
+
+    .redesign-staff-content-filter input,
+    .redesign-staff-content-filter select {
+        min-width: 180px;
+    }
+
+    .table-responsive-wrapper {
+        overflow-x: auto;
+    }
+}

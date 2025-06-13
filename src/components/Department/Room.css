@@ -1,0 +1,39 @@
+.room-container{
+    border: 2px solid #4cab9d;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px 20px 15px 20px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.5),    /* bóng dưới lớn hơn */
+    -2px 0 6px rgba(0, 0, 0, 0.2),    /* trái */
+    2px 0 6px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+    width: 180px;
+    height: 60px;
+}
+.room-icon{
+    color: #08a189;
+    font-size: 20px;
+}
+.room-name{
+    color: #08a189;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.room-container:hover{
+    cursor: pointer;
+    background-color: #08a189;
+    
+}
+
+.room-container:hover .room-icon{
+    color: #FFFFFF;
+}
+.room-container:hover .room-name{
+    color: #FFFFFF;
+}

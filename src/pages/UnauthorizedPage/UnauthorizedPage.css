@@ -1,0 +1,59 @@
+.UnauthorizedPage-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.UnauthorizedPage-wrapper {
+    margin: 80px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.UnauthorizedPage-errorInfo {
+    margin: 0;
+    font-size: 28px;
+    color: #000000;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 40;
+    line-height: 20px;
+    margin-top: 40px;
+}
+
+.UnauthorizedPage-errorHelp {
+    font-size: 10;
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    margin-top: 18px;
+}
+
+.UnauthorizedPage-boxBtn {
+    display: flex;
+    margin-top: 36px;
+    justify-content: center;
+}
+
+.UnauthorizedPage-errorBtn {
+    font-weight: 30px !important;
+    padding: 8px 32px !important;
+    height: 40px !important;
+    background-color: #10182F !important;
+    color: white !important;
+    font-size: 16px !important;
+    box-shadow: 0px 5px 10px rgba(116, 116, 156, 0.35) !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+    border-radius: 20px;
+
+}
+
+.UnauthorizedPage-errorBtn:hover{
+    box-shadow: 0px 0px 0px rgba(33, 33, 107, 0.35) !important;
+    color: #e4e2ef;
+    background-color: #ff6f7f !important;
+    border-color: #ff6f7f  !important;
+}

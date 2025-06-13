@@ -1,0 +1,92 @@
+.header{
+    background-color: #ebedea;
+    display: flex;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 35px;
+    justify-content: right;
+    flex-direction: row;
+    gap: 20px;
+}
+.tagLogout{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    align-items: center;
+    color: #a0a29e;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tagLogout:hover{
+    background-color: #08a189;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+}
+.tagLogout:hover .icon-header {
+    color: white; /* Đảm bảo icon chuyển sang màu trắng */
+}
+
+.icon-header {
+    font-size: 20px; /* Điều chỉnh kích thước icon */
+    color: #a0a29e;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notification-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.bell-icon {
+    font-size: 24px;
+    color: #ffc107; /* Màu vàng chuông */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.bell-icon:hover {
+    animation: shake 0.5s;
+}
+
+/* Biểu tượng badge đỏ góc trên */
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 14px;
+    height: 14px;
+    background-color: #c62828;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* Animation rung */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-15deg); }
+    40% { transform: rotate(15deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}

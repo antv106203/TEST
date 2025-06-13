@@ -1,0 +1,120 @@
+/* RESET & BASE SETUP */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+}
+
+/* PAGE BACKGROUND */
+.login-page {
+    width: 100%;
+    height: 100vh;
+    background: url('/src/assets/1c8e86c7ec63a076a6d123a3344aecf2.jpg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOGIN FORM BOX */
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 25px rgba(0, 128, 0, 0.2);
+    animation: fadeIn 0.4s ease;
+    box-sizing: border-box;
+}
+
+/* TEXT STYLES */
+.login-title {
+    font-size: 2rem;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    color: #388e3c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* FORM INPUTS */
+.login-form input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #c8e6c9;
+    border-radius: 12px;
+    background: #f1f8e9;
+    font-size: 1rem;
+    color: #2e7d32;
+    transition: all 0.3s ease;
+}
+
+.login-form input::placeholder {
+    color: #81c784;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 0 3px rgba(102, 187, 106, 0.2);
+}
+
+/* PASSWORD FIELD WITH ICON */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 44px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #2e7d32;
+    user-select: none;
+}
+
+/* BUTTON STYLE */
+.login-form button {
+    width: 100%;
+    padding: 14px;
+    background: #43a047;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+    background: #2e7d32;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

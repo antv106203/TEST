@@ -1,0 +1,26 @@
+.icon-pagination-tool{
+    border: 2px solid #c0c4bc;
+    padding: 5px 12px 5px 12px;
+}
+.icon-pagination-tool:hover{
+    cursor: pointer;
+}
+.icon-pagination-tool:active{
+    cursor: pointer;
+    background-color: #547794;
+    border: none;
+}
+.icon-pagination-tool:active svg{
+    color: #FFFFFF;
+}
+.icon-pagination-tool svg{
+    color: #547794;
+}
+.icon-pagination-tool.skip-left {
+    border-left: none;
+}
+
+/* Ẩn viền bên phải nếu skip là right */
+.icon-pagination-tool.skip-right {
+    border-right: none;
+}

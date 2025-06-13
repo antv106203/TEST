@@ -1,0 +1,266 @@
+.manage-list-room-container {
+    background-color: #ebedea;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.manage-list-room-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.manage-list-room-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    /* padding đã được kiểm soát bởi .manage-list-room-content */
+    /* background-color đã được kiểm soát bởi .manage-list-room-content */
+    /* height đã được kiểm soát bởi flex-grow */
+}
+
+.manage-list-room-toolbar select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height: 40px;
+    outline: none;
+}
+
+/* Search box */
+.manage-list-room-search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.manage-list-room-search-box svg {
+    margin-left: 10px;
+    color: #666;
+}
+
+.manage-list-room-search-box input {
+    border: none;
+    outline: none;
+    padding: 0 12px;
+    font-size: 14px;
+    width: 400px;
+    height: 100%;
+}
+
+/* Tạo phòng button */
+.manage-list-room-create-room-btn {
+    background-color: #08a189;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Carousel */
+.manage-list-room-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    /* padding đã được kiểm soát bởi .manage-list-room-content */
+    box-sizing: border-box;
+    /* background-color đã được kiểm soát bởi .manage-list-room-content */
+    flex-grow: 1;
+}
+
+.manage-list-room-scroll-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.manage-list-room-scroll-btn:hover {
+    background-color: #e9ecef;
+    border-color: #999;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Danh sách phòng */
+.manage-list-room-room-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex-grow: 1;
+    padding: 16px 0;
+}
+
+/* Ẩn thanh scroll ngang */
+.manage-list-room-room-list::-webkit-scrollbar {
+    display: none;
+}
+
+.manage-list-room-room-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.manage-list-room-room-card {
+    flex: 0 0 240px;
+    max-width: 240px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.manage-list-room-room-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.manage-list-room-room-card h4 {
+    margin: 8px 0 4px;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+}
+
+.manage-list-room-room-card p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.manage-list-room-room-card .status {
+    font-weight: bold;
+    color: #198754;
+}
+
+/* Action buttons */
+.manage-list-room-room-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.manage-list-room-edit-btn,
+.manage-list-room-delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.manage-list-room-edit-btn {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.manage-list-room-delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .manage-list-room-container {
+        padding: 12px;
+    }
+
+    .manage-list-room-content {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .manage-list-room-toolbar {
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+        gap: 16px;
+    }
+
+    .manage-list-room-search-box {
+        width: 100%;
+    }
+
+    .manage-list-room-search-box input {
+        width: 100%;
+    }
+
+    .manage-list-room-toolbar select {
+        width: 100%;
+    }
+
+    .manage-list-room-create-room-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .manage-list-room-carousel {
+        padding: 0;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .manage-list-room-container {
+        padding: 16px;
+    }
+
+    .manage-list-room-content {
+        padding: 20px;
+    }
+
+    .manage-list-room-toolbar {
+        padding: 0;
+        gap: 24px;
+    }
+
+    .manage-list-room-search-box input {
+        width: 300px;
+    }
+
+    .manage-list-room-carousel {
+        padding: 0;
+    }
+}
+
+/***************************************/

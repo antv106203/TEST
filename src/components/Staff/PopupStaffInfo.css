@@ -1,0 +1,258 @@
+.employee-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.employee-popup {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 500px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: popup-fade 0.3s ease;
+}
+
+@keyframes popup-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.employee-popup-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.employee-popup-close-btn:hover {
+  color: #111827;
+}
+
+.employee-popup-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+.employee-popup-content {
+  display: flex;
+  gap: 20px;
+}
+
+.employee-popup-avatar-section {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+}
+
+.employee-popup-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.employee-popup-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employee-popup-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.employee-popup-input:focus {
+  border-color: #08a189;
+}
+
+.employee-popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  gap: 12px;
+}
+
+.employee-popup-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.employee-popup-btn.cancel {
+  background-color: #ccc;
+  color: #333;
+  margin-right: 10px;
+}
+
+.employee-popup-btn.cancel:hover {
+  background-color: #b3b3b3;
+  transform: scale(1.05);
+}
+
+.employee-popup-btn.update {
+  background-color: #08a189;
+  color: white;
+}
+
+.employee-popup-btn.update:hover {
+  background-color: #075f52;
+  transform: scale(1.05);
+}
+
+.employee-popup-avatar-input {
+  display: none;
+}
+
+.employee-avatar-label {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.employee-avatar-label:hover {
+  transform: scale(1.05);
+}
+
+.employee-popup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.employee-popup-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.employee-popup-input {
+  padding: 8px 12px;
+  margin-top: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.employee-popup {
+  width: 600px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.employee-popup-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.employee-popup-avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.employee-popup-avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 2px solid #08a189;
+}
+
+.employee-popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .employee-popup {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .employee-popup-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .employee-popup-avatar-section {
+    width: 100%;
+  }
+
+  .employee-popup-form {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .employee-popup-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .employee-popup-btn {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .employee-popup {
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .employee-popup-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}

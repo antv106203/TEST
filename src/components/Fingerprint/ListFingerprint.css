@@ -1,0 +1,355 @@
+.list-fingerprint-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebedea;
+    flex-grow: 1;
+}
+
+.list-fingerprint-container-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.list-fingerprint-toolbar {
+    display: flex;
+    flex-direction: row;
+    padding-left: 60px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 12%;
+    gap: 180px;
+    align-items: center;
+}
+
+.list-fingerprint-toolbar-create {
+    display: flex;
+    flex-direction: row;
+    background-color: #08a189;
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+    gap: 5px;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+.list-fingerprint-toolbar-create:hover {
+    cursor: pointer;
+}
+
+.list-fingerprint-toolbar-create:active {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.list-fingerprint-toolbar-filter {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 30px;
+}
+
+.list-fingerprint-toolbar-filter input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+    min-width: 160px;
+    margin: 0px;
+}
+
+.list-fingerprint-toolbar-filter select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+    min-width: 160px;
+}
+
+.list-fingerprint-toolbar-filter input:focus,
+.list-fingerprint-toolbar-filter select:focus {
+    border-color: #08a189;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    outline: none;
+}
+
+.list-fingerprint-toolbar-filter-button {
+    padding: 8px 16px;
+    background-color: #08a189;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list-fingerprint-toolbar-filter-button:hover {
+    background-color: #167869;
+}
+
+.list-fingerprint-toolbar-filter-button:active {
+    scale: 1.05;
+}
+
+.list-fingerprint-table {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #FFFFFF;
+
+}
+
+.fingerprint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    height: 85%;
+    overflow-y: auto;
+}
+
+.fingerprint-card {
+    perspective: 1000px;
+    height: 100%;
+    background-color: #f4f6fa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    color: #333;
+    border-radius: 10px;
+}
+
+.fingerprint-card.active {
+    border: 1px solid #22c55e;
+}
+
+.fingerprint-card.inactive {
+    border: 1px solid #dc2626;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.fingerprint-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #111827;
+    font-size: 0.8rem;
+}
+
+.card-front {
+    align-items: center;
+    text-align: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: #f9fafb;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fingerprint-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.card-front h4 {
+    margin: 4px 0 2px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.card-front p {
+    margin: 1px 0;
+    color: #4b5563;
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
+
+.status {
+    margin-top: 4px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status.active {
+    background-color: #ecfdf5;
+    color: #059669;
+}
+
+.status.inactive {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+.card-back button {
+    width: 80%;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 4px auto;
+    display: block;
+}
+
+.card-back button:hover {
+    background-color: #2563eb;
+}
+
+/* Nút màu đỏ cho Xoá */
+.card-back button:nth-child(2) {
+    background-color: #ef4444;
+}
+
+.card-back button:nth-child(2):hover {
+    background-color: #b91c1c;
+}
+
+/* Nút màu xanh lá cho Bật lại */
+.card-back button:nth-child(3) {
+    background-color: #22c55e;
+}
+
+.card-back button:nth-child(3):hover {
+    background-color: #15803d;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .list-fingerprint-toolbar {
+        flex-direction: column;
+        padding: 16px;
+        height: auto;
+        gap: 16px;
+    }
+
+    .list-fingerprint-toolbar-filter {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .list-fingerprint-toolbar-filter input,
+    .list-fingerprint-toolbar-filter select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .list-fingerprint-toolbar-filter-button {
+        width: 100%;
+    }
+
+    .list-fingerprint-toolbar-create {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .fingerprint-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .fingerprint-card {
+        height: 180px;
+    }
+
+    .card-front h4 {
+        font-size: 0.8rem;
+    }
+
+    .card-front p {
+        font-size: 0.7rem;
+    }
+
+    .card-back button {
+        font-size: 0.7rem;
+        padding: 4px 6px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .list-fingerprint-toolbar {
+        padding: 16px 24px;
+        gap: 24px;
+    }
+
+    .list-fingerprint-toolbar-filter {
+        gap: 16px;
+    }
+
+    .fingerprint-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 16px;
+        padding: 16px;
+    }
+}
+
+.list-fingerprint-table-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.list-fingerprint-table-pagination-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-fingerprint-pagination-left-current-page {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c0c4bc;
+    padding: 5px 15px 5px 15px;
+}

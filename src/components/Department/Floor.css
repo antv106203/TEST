@@ -1,0 +1,37 @@
+.floor-container{
+    display: flex;
+    align-items: center;
+    border: 3px solid #1176bc;
+    border-bottom: 6px solid #1176bc;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.3),    /* bóng dưới lớn hơn */
+    -2px 0 6px rgba(0, 0, 0, 0.1),    /* trái */
+    2px 0 6px rgba(0, 0, 0, 0.1);  
+    background-color: #FFFFFF;
+    color: #1176bc;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.floor-container:hover{
+    cursor: pointer;
+    background-color: #1176bc;
+    color: #FFFFFF;
+}
+.floor-container:active{
+    cursor: pointer;
+    background-color: #08a189;
+    color: #FFFFFF;
+    border: 3px solid #08a189;
+    border-bottom: 6px solid #08a189;
+}
+
+.floor-container.selected{
+    background-color: #08a189;
+    color: #FFFFFF;
+    border: 3px solid #08a189;
+    border-bottom: 6px solid #08a189;
+}

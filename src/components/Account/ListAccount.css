@@ -1,0 +1,276 @@
+.list-account-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ebedea;
+    flex-grow: 1;
+}
+.list-account-container-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.list-account-toolbar{
+    display: flex;
+    flex-direction: row;
+    padding-left: 60px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 12%;
+    gap: 180px;
+
+}
+.list-account-toolbar-create{
+    display: flex;
+    flex-direction: row;
+    background-color: #08a189;
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+    gap: 5px;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+.list-account-toolbar-create:hover{
+    cursor: pointer;
+}
+.list-account-toolbar-create:active{
+    cursor: pointer;
+    scale: 1.05;
+}
+.list-account-toolbar-filter{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 30px;
+}
+.list-account-toolbar-search{
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+.list-account-toolbar-search input{
+    height: 100%;
+    margin: 0px;
+    outline: none;
+    border: 1.5px solid #cfd3cd;
+    width: 100%;
+    color: #343333;
+}
+.list-account-toolbar-role{
+    display: flex;
+    height: 100%;
+    width: 40%;
+}
+.list-account-toolbar-role select{
+    height: 100%;
+    margin: 0px;
+    outline: none;
+    border: 1.5px solid #cfd3cd;
+    width: 100%;
+    padding-left: 10px;
+    color: #343333;
+    padding-right: 10px;
+}
+.list-account-toolbar-btn-search{
+    display: flex;
+    background-color: #08a189;
+    justify-content: center;
+    padding: 10px 15px 10px 15px;
+    color: #FFFFFF;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.list-account-toolbar-btn-search:hover{
+    cursor: pointer;
+}
+.list-account-toolbar-btn-search:active{
+    cursor: pointer;
+    scale: 1.05;
+}
+.list-account-table{
+    overflow-x: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 76%;
+
+}
+.list-account{
+    width: 100%;
+    border-collapse: collapse;
+}
+.list-account thead {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+.list-account th, .list-account td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+  
+.list-account tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+.edit-btn, .delete-btn {
+    padding: 6px 10px;
+    margin-right: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.edit-btn {
+    background-color: #0288d1;
+    color: white;
+}
+  
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+}
+.list-account-account-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-account-account-icon svg{
+    font-size: 24px; /* hoặc 24px */
+    color: #1976d2;
+}
+.list-account-status-active{
+    display: flex;
+    padding: 5px 5px 5px 5px;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #4caf50;
+    border-radius: 7px;
+    align-items: center;
+    border: 1px solid #4caf50;
+    justify-content: center;
+    text-align: center;
+}
+.list-account-status-inactive{
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: #e53935;
+    border-radius: 7px;
+    align-items: center;
+    border: 1px solid #e53935;
+    width: 120px;
+    justify-content: center;
+    text-align: center;
+}
+.list-account-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.list-account-btn-block{
+    display: flex;
+    background-color: #ffae07;
+    justify-content: center;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.list-account-btn-block:hover{
+    cursor: pointer;
+}
+.list-account-btn-block:active{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.list-account-btn-delete{
+    display: flex;
+    background-color: #ff5056;
+    justify-content: center;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.list-account-btn-delete:hover{
+    cursor: pointer;
+}
+.list-account-btn-delete:active{
+    cursor: pointer;
+    scale: 1.05;
+}
+.list-account-btn-unblock{
+    display: flex;
+    background-color: #ffae07;
+    justify-content: center;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.list-account-btn-unblock:hover{
+    cursor: pointer;
+}
+.list-account-btn-unblock:active{
+    cursor: pointer;
+    scale: 1.05;
+}
+.list-account-btn-reset-password{
+    display: flex;
+    background-color: #0fd186;
+    justify-content: center;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+.list-account-btn-reset-password:hover{
+    cursor: pointer;
+}
+.list-account-btn-reset-password:active{
+    cursor: pointer;
+    scale: 1.05;
+}
+.list-account-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.list-account-pagination-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.list-account-pagination-left-current-page{
+    display: flex;
+    align-items: center;
+    border: 1px solid #c0c4bc;
+    padding: 5px 15px 5px 15px;
+}
+.list-account-pagination-right{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    align-items: center;
+}

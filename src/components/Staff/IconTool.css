@@ -1,0 +1,18 @@
+.icontool-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.icontool-container:hover{
+    cursor: pointer;
+}
+.icontool-container:active{
+    scale: 1.1;
+}
+.icontool-container svg{
+    color: #FFFFFF;
+}

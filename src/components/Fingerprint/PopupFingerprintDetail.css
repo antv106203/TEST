@@ -1,0 +1,131 @@
+.popup-detail-fingerprint-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-detail-fingerprint-content {
+    background: #fff;
+    padding: 20px 18px;
+    border-radius: 16px;
+    width: 420px; /* giảm nhẹ */
+    max-height: 85vh; /* giảm để tránh tràn */
+    overflow-y: auto;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideIn 0.3s ease-in-out;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.popup-detail-fingerprint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.popup-detail-fingerprint-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.popup-detail-fingerprint-close-icon {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.popup-detail-fingerprint-avatar {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.popup-detail-fingerprint-avatar img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.popup-detail-fingerprint-info {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    padding: 0 4px;
+}
+
+.popup-detail-fingerprint-info p {
+    margin: 6px 0;
+}
+
+.popup-detail-fingerprint-info strong {
+    color: #111;
+    font-weight: 600;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.popup-detail-fingerprint-close-button,
+.popup-detail-fingerprint-update-button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background-color 0.25s ease;
+}
+
+.popup-detail-fingerprint-update-button {
+    background-color: #08a189;
+    color: white;
+}
+.popup-detail-fingerprint-update-button:hover{
+    background-color: #186b5f;
+}
+
+.popup-detail-fingerprint-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.popup-detail-fingerprint-row label {
+    min-width: 120px;
+    font-weight: 600;
+    color: #111;
+    font-size: 13.5px;
+    white-space: nowrap;
+}
+
+.popup-detail-fingerprint-row input {
+    flex: 1;
+    padding: 5px 4px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: #333;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/****************************************/
+
+

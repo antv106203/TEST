@@ -1,0 +1,79 @@
+.popup-confirm-delete-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    animation: fadeIn 0.3s ease;
+}
+  
+.popup-confirm-delete-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: scaleIn 0.25s ease-out;
+}
+  
+.popup-confirm-delete-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+  
+.popup-confirm-delete-btn-cancel, .popup-confirm-delete-btn-confirm {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.2s;
+}
+.popup-confirm-delete-btn-cancel{
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.popup-confirm-delete-btn-cancel:hover {
+    background-color: #d5d5d5;
+    transform: scale(1.02);
+}
+  
+.popup-confirm-delete-btn-confirm {
+    background-color: #d32f2f;
+    color: white;
+}
+.popup-confirm-delete-btn-confirm:hover {
+    background-color: #c62828;
+    transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+  
+@keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+}

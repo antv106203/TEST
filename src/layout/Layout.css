@@ -1,0 +1,30 @@
+.container-layout {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+
+.right-layout {
+    flex-grow: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .container-layout {
+        flex-direction: column;
+    }
+
+    .right-layout {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .right-layout {
+        margin-left: 60px;
+    }
+}

@@ -1,0 +1,157 @@
+.list-accesslog-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 10px;
+    background-color: #f1f5f9;
+}
+.list-accesslog-content-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+}
+.list-accesslog-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    padding: 20px 35px 20px 35px;
+    gap: 10px;
+}
+.list-accesslog-filter{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 100px;
+}
+.list-accesslog-filter-from{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 10px;
+}
+.list-accesslog-filter-from-input input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #cbcfc9;
+    margin: 0;
+}
+.list-accesslog-filter-to{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 10px;
+}
+.list-accesslog-filter-to-input input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #cbcfc9;
+    margin: 0;
+}
+.list-accesslog-filter-status{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 8px;
+}
+.list-accesslog-filter-status-select select{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #cbcfc9;
+    font-family: 'Montserrat', sans-serif;
+}
+.list-accesslog-filter-button-search-container{
+    display: flex;
+    flex: 1;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.list-accesslog-filter-button-search{
+    display: flex;
+    background-color: #08a189;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.list-accesslog-filter-button-refresh{
+    display: flex;
+    background-color: #fc645c;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.list-accesslog-filter-button-refresh svg{
+    color: #FFFFFF;
+}
+.list-accesslog-filter-button-refresh:hover{
+    cursor: pointer;
+}
+.list-accesslog-filter-button-refresh:active{
+    cursor: pointer;
+    scale: 1.2;
+}
+.list-accesslog-filter-button-search:hover{
+    cursor: pointer;
+}
+.list-accesslog-filter-button-search:active{
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.list-accesslog-filter-button-search svg{
+    color: #FFFFFF;
+}
+
+.list-accesslog{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 cột bằng nhau */
+    gap: 10px; /* khoảng cách giữa các item */
+    padding: 20px 0px 20px 0px;
+    perspective: 1000px; /* hiệu ứng 3D */
+    /*400px*/
+    height: 70%;
+}
+.list-accesslog-pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.list-accesslog-pagination-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.list-accesslog-pagination-left-current-page{
+    display: flex;
+    align-items: center;
+    border: 1px solid #c0c4bc;
+    padding: 5px 15px 5px 15px;
+}
+.list-accesslog-pagination-right{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    align-items: center;
+}

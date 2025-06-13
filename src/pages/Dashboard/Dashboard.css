@@ -1,0 +1,235 @@
+/* Dashboard.css */
+.dashboard-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  background-color: #f1f5f9;
+  flex-grow: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.dashboard-section-summary {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.dashboard-section-summary-card {
+  text-align: center;
+  background: #e0f2fe;
+  padding: 16px;
+  border-radius: 10px;
+  width: 250px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.dashboard-section-summary-card:nth-child(2) {
+  background: #fef9c3;
+}
+
+.dashboard-section-summary-card:nth-child(3) {
+  background: #d9f99d;
+}
+
+.dashboard-section-summary-card:nth-child(4) {
+  background: #fcd34d;
+}
+
+.dashboard-section-summary-card:hover {
+  transform: translateY(-2px);
+}
+
+.dashboard-section-summary-card-icon-circle {
+  font-size: 18px;
+  background-color: white;
+  color: #2563eb;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-main {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.dashboard-main-chart,
+.dashboard-access-history {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main-chart h3,
+.dashboard-access-history h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.dashboard-access-entry {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.dashboard-access-entry:last-child {
+  border-bottom: none;
+}
+
+.dashboard-access-avatar-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  background-size: cover;
+  background-position: center;
+}
+
+.dashboard-access-name {
+  flex: 1;
+  font-size: 15px;
+  color: #111827;
+}
+
+.dashboard-access-time {
+  font-size: 14px;
+  color: #6b7280;
+  width: 170px;
+  text-align: left;
+}
+
+.dashboard-access-status {
+  font-size: 16px;
+}
+
+.dashboard-access-status.success {
+  color: #22c55e;
+}
+
+.dashboard-access-status.failed {
+  color: #ef4444;
+}
+
+.dashboard-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.dashboard-range-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #111827;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dashboard-range-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .dashboard-container {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  .dashboard-section {
+    padding: 16px;
+  }
+
+  .dashboard-section-title {
+    font-size: 18px;
+  }
+
+  .dashboard-section-summary-card {
+    width: 100%;
+    height: 100px;
+  }
+
+  .dashboard-main {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dashboard-main-chart,
+  .dashboard-access-history {
+    width: 100%;
+  }
+
+  .dashboard-access-entry {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-access-time {
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .dashboard-chart-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard-section-summary-card {
+    width: calc(50% - 16px);
+  }
+
+  .dashboard-main {
+    flex-direction: column;
+  }
+
+  .dashboard-main-chart,
+  .dashboard-access-history {
+    width: 100%;
+  }
+}

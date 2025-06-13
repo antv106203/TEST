@@ -1,0 +1,110 @@
+.popup-create-device-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.popup-create-device-content {
+    background-color: #fff;
+    border-radius: 16px;
+    width: 420px;
+    max-width: 95%;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    animation: popupFadeIn 0.3s ease-in-out;
+}
+
+.popup-create-device-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.popup-create-device-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.popup-create-device-close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.popup-create-device-close-btn:hover {
+    color: #f44336;
+}
+
+.popup-create-device-form-group {
+    margin-bottom: 16px;
+}
+
+.popup-create-device-form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+
+.popup-create-device-form-group input,
+.popup-create-device-form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.popup-create-device-form-group input:disabled {
+    background-color: #f5f5f5;
+    color: #555;
+}
+
+.popup-create-device-form-group select:hover,
+.popup-create-device-form-group input:hover {
+    border-color: #888;
+}
+
+.popup-create-device-btn-save {
+    width: 100%;
+    padding: 12px;
+    background-color: #08a189;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.popup-create-device-btn-save:hover {
+    background-color: #1d7b6d;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

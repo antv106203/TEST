@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-red {
+  background-color: crimson;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.container-wrapper {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  background-color: deepskyblue;
+  color: white;
+  position: relative;
+  top: 0;
+  text-align: center;
+  transition: all .3s ease-in-out;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 250px;
+}
+
+.item {
+  width: 100%;
+  padding: 14px 0;
+  padding-left: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.item:hover {
+  background-color: #0377DA;
+  transition: all .3s ease-in-out;
+}
+
+.icon {
+  padding-right: 10px;
+  display: inline-block;
+  width: 20%;
+  font-size: 15px;
+}
+
+.bg-blue {
+  background-color: #3960D0;
+  color: white;
+}
+
+.bg-blue .item:hover {
+  background-color: #0541AA;
+}
+
+.blue-hover:hover {
+  background-color: #609BEB;
+  color: white;
+}
+
+.bg-light {
+  background-color: #FFFEFF;
+  color: black;
+}
+
+.light-hover:hover {
+  background-color: #F6F6F6;
+}
+
+.bg-light .item:hover {
+  background-color: #1c1e2a;
+  color: white;
+}
+
+.bg-black {
+  background-color: #1c1e2a;
+  color: white;
+}
+
+.bg-black .item:hover {
+  background-color: white;
+  color: #1c1e2a;
+}
+
+.black-hover:hover {
+  background-color: #2C2F3E;
+  color: white;
+}
+
+.bg-new-purple {
+  background-color: #2b4050;
+  color: white;
+}
+
+.bg-new-purple .item:hover {
+  background-color: #20313a;
+  color: white;
+  border-right: 4px solid #08a189;
+}
+
+.dropdown-item {
+  text-align: left;
+  cursor: pointer;
+}
+
+.mx-1 {
+  margin: 0 1em;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+  position: relative;
+}
+
+.logo-image {
+  width: 100px;
+  margin-top: 1em;
+}
+
+.toggler {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.collapsed {
+  width: 85px;
+  min-width: 85px;
+  max-width: 85px;
+  flex-basis: 85px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container-wrapper {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    flex-basis: 100%;
+  }
+
+  .container-wrapper.mobile-open {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2b4050;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+  }
+
+  .item {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .icon {
+    width: auto;
+    margin-right: 12px;
+    font-size: 18px;
+  }
+
+  .logo-image {
+    width: 80px;
+    margin: 20px auto;
+  }
+
+  /* Overlay when menu is open */
+  .container-wrapper::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* Allow clicks to pass through */
+  }
+
+  .container-wrapper.mobile-open::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Add a separate overlay div that will handle clicks */
+  .container-wrapper::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: -1;
+    /* Place behind the menu */
+  }
+
+  .container-wrapper.mobile-open::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
+
+input {
+  padding: 12px 20px;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+
+.pos-left {
+  left: 0;
+}
+
+.pos-right {
+  right: 0;
+}
+
+.bg-peach {
+  background-color: #FD7E65;
+  color: white;
+}
+
+.bg-peach-hover:hover {
+  background-color: #FD9768;
+}
+
+.bg-peach .item:hover {
+  background-color: white;
+  color: #FD7E65;
+}
+
+.bg-purple {
+  background-color: #A771E4;
+  color: white;
+}
+
+.bg-purple .item:hover {
+  background-color: #7F00BE;
+}
+
+.bg-purple-hover:hover {
+  background-color: #E26FCF;
+}
+
+.bg-aqua {
+  background-color: #1DA4F4;
+  color: white;
+}
+
+.bg-aqua-hover:hover {
+  background-color: #16BCDE;
+}
+
+.float-right {
+  float: right;
+}
+
+.active-item {
+  background-color: #08a189 !important;
+  color: white !important;
+}

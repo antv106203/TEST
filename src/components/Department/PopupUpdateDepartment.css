@@ -1,0 +1,128 @@
+/* Overlay */
+.popup-update-department-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+/* Content Box */
+.popup-update-department-content {
+    background: #fff;
+    border-radius: 12px;
+    width: 420px;
+    padding: 24px 28px;
+    position: relative;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    animation: popupFadeIn 0.25s ease-in-out;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Close Button */
+.popup-update-department-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.popup-update-department-close-btn:hover {
+    background-color: #e5e5e5;
+}
+
+/* Heading */
+.popup-update-department-content h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight:400;
+    color: #111827;
+}
+
+/* Form */
+.popup-update-department-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.popup-update-department-form label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #374151;
+}
+
+.popup-update-department-form input,
+.popup-update-department-form select {
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    transition: border 0.2s ease;
+}
+
+.popup-update-department-form input:focus,
+.popup-update-department-form select:focus {
+    border-color: #08a189;
+    outline: none;
+}
+
+/* Action Buttons */
+.popup-update-department-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.popup-update-department-btn-cancel {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.popup-update-department-btn-cancel:hover {
+    background-color: #e5e7eb;
+}
+
+.popup-update-department-btn-update {
+    background-color: #08a189;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.popup-update-department-btn-update:hover {
+    background-color: #0a7162;
+}

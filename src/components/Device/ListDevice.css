@@ -1,0 +1,335 @@
+.list-device-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebedea;
+    flex-grow: 1;
+}
+
+.list-device-container-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+
+.list-device-toolbar {
+    display: flex;
+    flex-direction: row;
+    padding-left: 60px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 12%;
+    gap: 180px;
+    align-items: center;
+}
+
+.list-device-toolbar-create {
+    display: flex;
+    flex-direction: row;
+    background-color: #08a189;
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+    gap: 5px;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+.list-device-toolbar-create:hover {
+    cursor: pointer;
+}
+
+.list-device-toolbar-create:active {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.list-device-toolbar-search {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.device-search-input {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    font-family: "Segoe UI", sans-serif;
+    min-width: 300px;
+}
+
+.device-room-select {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    font-family: "Segoe UI", sans-serif;
+    min-width: 200px;
+}
+
+.device-search-input:focus,
+.device-room-select:focus {
+    border-color: #08a189;
+    box-shadow: 0 0 0 2px rgba(8, 161, 137, 0.2);
+    outline: none;
+}
+
+.device-search-input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.device-room-select {
+    color: #333;
+    cursor: pointer;
+}
+
+.device-room-select option {
+    padding: 10px;
+}
+
+.device-search-button {
+    background-color: #08a189;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.device-search-button:hover {
+    background-color: #066f5e;
+}
+
+.list-device-table {
+    overflow-x: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 76%;
+
+}
+
+.list-device {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.list-device thead {
+    background-color: #1976d2;
+    color: white;
+}
+
+.list-device th,
+.list-device td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.list-device tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.list-device-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-device-icon svg {
+    font-size: 24px;
+    /* hoặc 24px */
+    color: #1976d2;
+}
+
+.list-device-status {
+    display: inline-flex;
+    width: 100px;
+    /* ✅ cố định chiều rộng để các trạng thái đều nhau */
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid;
+    white-space: nowrap;
+}
+
+.list-device-status.online {
+    color: #4caf50;
+    border-color: #4caf50;
+    background-color: #f0fff4;
+}
+
+.list-device-status.offline {
+    color: #e53935;
+    border-color: #e53935;
+    background-color: #fff5f5;
+}
+
+.list-device-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.list-device-btn-delete {
+    display: flex;
+    background-color: #ff5056;
+    justify-content: center;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.list-device-btn-delete:hover {
+    cursor: pointer;
+}
+
+.list-device-btn-delete:active {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.list-device-btn-info {
+    display: flex;
+    background-color: #0fd186;
+    justify-content: center;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.list-device-btn-info:hover {
+    cursor: pointer;
+}
+
+.list-device-btn-info:active {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.list-device-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.list-device-pagination-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-device-pagination-left-current-page {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c0c4bc;
+    padding: 5px 15px 5px 15px;
+}
+
+.list-device-pagination-right {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .list-device-toolbar {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        height: auto;
+    }
+
+    .list-device-toolbar-search {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .device-search-input,
+    .device-room-select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .device-search-button {
+        width: 100%;
+    }
+
+    .list-device-toolbar-create {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .list-device-table {
+        padding: 12px;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .list-device th,
+    .list-device td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .list-device-status {
+        width: 80px;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .list-device-toolbar {
+        padding: 16px 24px;
+        gap: 24px;
+    }
+
+    .device-search-input {
+        min-width: 200px;
+    }
+
+    .device-room-select {
+        min-width: 150px;
+    }
+
+    .list-device-table {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,302 @@
+.staff-detail-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #f5f6f8;
+    padding: 24px;
+    padding-bottom: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    gap: 10px;
+}
+
+.staff-detail-container-content {
+    border-radius: 12px;
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.05); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.staff-detail-info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.staff-detail-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+
+.staff-detail-avatar img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #cbd6e2;
+    background-color: #f3f4f6;
+}
+.staff-detail-update-btn {
+    padding: 5px 8px;
+    background-color: #059669;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 3px 6px rgba(59, 130, 246, 0.4);
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.staff-detail-update-btn:hover {
+    background-color: #107555;
+}
+
+.staff-detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.staff-detail-info-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.staff-detail-info-item {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background 0.2s ease;
+    flex: 1;
+    min-width: 0; /* Cần thiết để overflow có hiệu lực */
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 220px;
+    height: 80px;
+}
+
+.staff-detail-info-item:hover {
+    background-color: #f0f4f8;
+}
+
+.staff-detail-info-item-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.staff-detail-info-item-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+    word-break: break-word;
+}
+
+.detail-staff-fingerprint-section-container{
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.detail-staff-fingerprint-section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.detail-fingerprint-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-bottom: 0px;
+    height: 85%;
+    overflow-y: auto;
+}
+
+.detail-fingerprint-card {
+    perspective: 1000px;
+    height: 100px;
+    background-color: #f4f6fa; /* nhẹ nhàng, nổi trên nền trắng */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* tạo chiều sâu */
+    color: #333;
+}
+.detail-fingerprint-card.active {
+    border:1px solid #22c55e; /* xanh lá */
+}
+
+.detail-fingerprint-card.inactive {
+  border:1px solid #dc2626; /* đỏ */
+}
+
+.detail-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.detail-fingerprint-card:hover .detail-card-inner {
+    transform: rotateY(180deg);
+}
+
+.detail-card-front,
+.detail-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    color: #111827;
+    font-size: 0.8rem;
+}
+
+.detail-card-front {
+    align-items: center;
+    text-align: center;
+}
+
+.detail-card-back {
+    transform: rotateY(180deg);
+    background: #f9fafb;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.detail-fingerprint-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.detail-card-front h4 {
+    margin: 4px 0 2px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.detail-card-front p {
+    margin: 1px 0;
+    color: #4b5563;
+    font-size: 0.75rem;
+    line-height: 1.2;
+}
+
+.detail-card-status {
+    margin-top: 4px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    border-radius: 999px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.detail-card-status.active {
+    background-color: #ecfdf5;
+    color: #059669;
+}
+
+.detail-card-status.inactive {
+    background-color: #fef2f2;
+    color: #dc2626;
+}
+
+.detail-card-back button {
+    width: 80%;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 4px auto;
+    display: block;
+}
+
+.detail-card-back button:hover {
+    background-color: #2563eb;
+}
+
+/* Nút màu đỏ cho Xoá */
+.detail-card-back button:nth-child(1) {
+    background-color: #ef4444;
+}
+
+.detail-card-back button:nth-child(1):hover {
+    background-color: #b91c1c;
+}
+
+/* Nút màu xanh lá cho Bật lại */
+.detail-card-back button:nth-child(2) {
+    background-color: #22c55e;
+}
+
+.detail-card-back button:nth-child(2):hover {
+    background-color: #15803d;
+}
+
+.fingerprint-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+    border-left: 4px solid #059669;
+    padding-left: 12px;
+    line-height: 1.4;
+}
+.empty-fingerprint-box {
+    text-align: center;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-fingerprint-image {
+    width: 180px;
+    height: auto;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}

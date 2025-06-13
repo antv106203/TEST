@@ -1,0 +1,83 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:SE Asia Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0700
+TZOFFSETTO:+0700
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:+0700
+TZOFFSETTO:+0700
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=Phuong Phi Thi:mailto:PhuongPT83@fpt.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=an106203h@
+ gmail.com:mailto:an106203h@gmail.com
+ATTACH:CID:image001.jpg@01DBB926.0F0F2C30
+DESCRIPTION;LANGUAGE=en-GB:[cid:image001.jpg@01DBB926.0F0F2C30]\n\n\nTHƯ M
+ ỜI THAM DỰ TRAO ĐỔI CÔNG VIỆC\n\n   Dear Mr Từ Văn An\,\n\n  
+  Chúng tôi chân thành cảm ơn Anh đã dành sự quan tâm cho vị
+  trí tuyển dụng: Thực tập sinh Java\nQua quá trình sơ tuyển\
+ , Công ty nhận thấy sự phù hợp về kiến thức và kinh nghi
+ ệm của Anh cho vị trí dự tuyển. Và để hai bên có thể t
+ ìm hiểu chi tiết hơn về cơ hội hợp tác\, chúng tôi trân t
+ rọng kính mời Anh tham dự buổi trao đổi theo lịch mời dư
+ ới đây:\n\n  *   Thời gian: 09h00’\, Thứ 2\, Ngày 05/5/2025\n  
+ *   Đại diện FIS tham dự trao đổi: Mr Nguyễn Hữu Dũng – T
+ rưởng phòng CN Phần mềm\n  *   Meeting link: https://fpt-is.webex.
+ com/fpt-is/j.php?MTID=m232e915451a88d37caae45556f624640\n   Anh vui lòng 
+ phản hồi lại email này\, để chúng tôi chắc chắn rằng Anh
+  sẽ tham dự lịch trao đổi trên.\nTrân trọng!\nLưu ý ứng v
+ iên:\nỨng viên vui lòng truy cập vào hệ thống webex trước 1
+ 5 phút & liên hệ số 0986 394 457 (Mrs. Phương Phí) để được
+  hỗ trợ cho quá trình checkin\, tham gia trao đổi trực tiếp t
+ ại văn phòng.\n\nWebsite:  https://careers.fptis.com/<%20https:/career
+ s.fptis.com/> l https://www.facebook.com/FISCareers\nTel: +84 (24) 356 26 
+ 000 (ext. 2057)\n\n\n\n
+UID:040000008200E00074C5B7101A82E008000000007311C962EBB8DB01000000000000000
+ 010000000EF6B653B9AEB6947A00B6380CA42FC7D
+SUMMARY;LANGUAGE=en-GB:FPT IS - THƯ MỜI THAM DỰ PHỎNG VẤN THỰC T
+ ẬP SINH JAVA
+DTSTART;TZID=SE Asia Standard Time:20250505T090000
+DTEND;TZID=SE Asia Standard Time:20250505T093000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20250429T094506Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-GB:https://fpt-is.webex.com/fpt-is/j.php?MTID=m232e915
+ 451a88d37caae45556f624640
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:2123688726
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGEXTERNALLINK:
+X-MICROSOFT-ONLINEMEETINGCONFLINK:
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:TRUE
+X-MICROSOFT-LOCATIONDISPLAYNAME:https://fpt-is.webex.com/fpt-is/j.php?MTID=
+ m232e915451a88d37caae45556f624640
+X-MICROSOFT-LOCATIONSOURCE:None
+X-MICROSOFT-LOCATIONS:[{"DisplayName":"https://fpt-is.webex.com/fpt-is/j.ph
+ p?MTID=m232e915451a88d37caae45556f624640"\,"LocationAnnotation":""\,"Locat
+ ionUri":""\,"LocationStreet":""\,"LocationCity":""\,"LocationState":""\,"L
+ ocationCountry":""\,"LocationPostalCode":""\,"LocationFullAddress":""}]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
